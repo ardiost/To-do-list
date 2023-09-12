@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family:'DM Sans thin';
+    src: url(/Font/DMSans-Thin.ttf);
+}
+@font-face {
+    font-family:'DM Sans semi bold';
+    src: url(/Font/DMSans-SemiBold.ttf);
+}
+@font-face {
+    font-family:'DM Sans regualr';
+    src: url(/Font/DMSans-Regular.ttf);
+}
+@font-face {
+    font-family:'DM Sans medium';
+    src: url(/Font/DMSans-Medium.ttf);
+}
+@font-face {
+    font-family:'DM Sans light';
+    src: url(/Font/DMSans-Light.ttf);
+}

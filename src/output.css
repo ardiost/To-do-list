@@ -534,12 +534,151 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bg-slate-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
+.m-\[40px\] {
+  margin: 40px;
 }
 
-.text-cyan-50 {
+.flex {
+  display: flex;
+}
+
+.w-\[513px\] {
+  width: 513px;
+}
+
+.w-\[350px\] {
+  width: 350px;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-x-\[8px\] {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.gap-x-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.gap-x-2\.5 {
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
+}
+
+.rounded-\[16px\] {
+  border-radius: 16px;
+}
+
+.bg-\[\#2B1887\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(43 24 135 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#D5CCFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(213 204 255 / var(--tw-bg-opacity));
+}
+
+.p-\[24px\] {
+  padding: 24px;
+}
+
+.p-\[16\62D\637\] {
+  padding: 16حط;
+}
+
+.p-\[16px\] {
+  padding: 16px;
+}
+
+.pl-\[8px\] {
+  padding-left: 8px;
+}
+
+.font-body {
+  font-family: DM Sans regualr;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[25px\] {
+  font-size: 25px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.text-\[21px\] {
+  font-size: 21px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-\[500\] {
+  font-weight: 500;
+}
+
+.font-\[600\] {
+  font-weight: 600;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-\[\#2B1887\] {
   --tw-text-opacity: 1;
-  color: rgb(236 254 255 / var(--tw-text-opacity));
+  color: rgb(43 24 135 / var(--tw-text-opacity));
+}
+
+@font-face {
+  font-family:'DM Sans thin';
+
+  src: url(/Font/DMSans-Thin.ttf);
+}
+
+@font-face {
+  font-family:'DM Sans semi bold';
+
+  src: url(/Font/DMSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family:'DM Sans regualr';
+
+  src: url(/Font/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family:'DM Sans medium';
+
+  src: url(/Font/DMSans-Medium.ttf);
+}
+
+@font-face {
+  font-family:'DM Sans light';
+
+  src: url(/Font/DMSans-Light.ttf);
 }
