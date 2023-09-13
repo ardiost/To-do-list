@@ -539,8 +539,24 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.bottom-\[36px\] {
+  bottom: 36px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .m-\[40px\] {
   margin: 40px;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .ml-\[40px\] {
@@ -559,16 +575,44 @@ video {
   display: flex;
 }
 
-.max-h-\[94vh\] {
-  max-height: 94vh;
+.h-\[94vh\] {
+  height: 94vh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-\[350px\] {
   width: 350px;
 }
 
+.w-\[318px\] {
+  width: 318px;
+}
+
+.w-\[318\] {
+  width: 318;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-\[100\%\] {
+  max-width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -591,6 +635,10 @@ video {
   border-radius: 16px;
 }
 
+.rounded-\[6px\] {
+  border-radius: 6px;
+}
+
 .bg-\[\#2B1887\] {
   --tw-bg-opacity: 1;
   background-color: rgb(43 24 135 / var(--tw-bg-opacity));
@@ -606,12 +654,39 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
 .p-\[16px\] {
   padding: 16px;
 }
 
+.py-\[4px\] {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
 .pl-\[8px\] {
   padding-left: 8px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-body {
@@ -642,6 +717,17 @@ video {
 .text-\[\#2B1887\] {
   --tw-text-opacity: 1;
   color: rgb(43 24 135 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .scrollbar-none {
