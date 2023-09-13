@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/output.css" />
     <title>Document</title>
+    
   </head>
   <body class="bg-[#2B1887] font-body overflow-hidden">
     <div class="m-[40px] flex">
@@ -12,7 +13,7 @@
         class="w-[350px] bg-[#D5CCFF] p-[16px] rounded-[16px] h-[94vh] overflow-y-auto scrollbar-none"
       >
         <div class="flex" id="todo-section-title">
-          <div>
+          <div id="close-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -78,7 +79,7 @@
         </div>
         <div class="absolute bottom-[36px] flex w-[318px] justify-center">
           <p
-            class="bg-[#2B1887] w-[318px] py-[6px] rounded-[6px] text-white cursor-pointer text-center"
+            class="bg-[#2B1887] w-[318px] py-[6px] rounded-[6px] text-white cursor-pointer text-center" id="new-item-button"
           >
             + Add new item
           </p>
@@ -116,10 +117,10 @@
       </div>
     </div>
     <div
-      class="w-full h-full bg bg-black bg-opacity-40 absolute top-0 backdrop-blur-sm flex justify-center items-center"
-      id=""
+      class="w-full h-full bg bg-black bg-opacity-40 absolute top-0 backdrop-blur-sm flex justify-center items-center hidden"
+      id="popup"
     >
-      <div class="w-[500px] h-[385px] bg-white rounded-[16px]">
+      <div class="w-[500px] h-[385px] bg-white rounded-[16px]" id="popup-form">
         <div class="p-[16px] cursor-pointer" id="close-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -161,13 +162,12 @@
               id="client"
             />
           </div>
-          <div
-          class="flex mx-[16px] text-[#2B1887]"
-          id="input-priority"
-        >
-        <label class="text-[#2B1887] w-[50%]" for="">Priority</label>
-        <label class="text-[#2B1887] w-[50%] ml-[12px]" for="">Level of effort</label> 
-        </div>
+          <div class="flex mx-[16px] text-[#2B1887]" id="input-priority">
+            <label class="text-[#2B1887] w-[50%]" for="">Priority</label>
+            <label class="text-[#2B1887] w-[50%] ml-[12px]" for=""
+              >Level of effort</label
+            >
+          </div>
           <div
             class="flex justify-between mx-[16px] text-[#2B1887]"
             id="input-priority"
@@ -199,5 +199,6 @@
         </div>
       </div>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>
