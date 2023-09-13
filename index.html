@@ -76,8 +76,12 @@
             </div>
           </div>
         </div>
-        <div class="absolute bottom-[36px] flex w-[318px] justify-center ">
-          <p class="bg-[#2B1887] w-[318px] py-[6px] rounded-[6px] text-white cursor-pointer text-center ">+ Add new item</p>
+        <div class="absolute bottom-[36px] flex w-[318px] justify-center">
+          <p
+            class="bg-[#2B1887] w-[318px] py-[6px] rounded-[6px] text-white cursor-pointer text-center"
+          >
+            + Add new item
+          </p>
         </div>
       </div>
       <div
@@ -111,6 +115,89 @@
         </div>
       </div>
     </div>
-    <!-- <div class="w-full h-full bg bg-black bg-opacity-40	absolute top-0 backdrop-blur-sm	" id="">.</div> -->
+    <div
+      class="w-full h-full bg bg-black bg-opacity-40 absolute top-0 backdrop-blur-sm flex justify-center items-center"
+      id=""
+    >
+      <div class="w-[500px] h-[385px] bg-white rounded-[16px]">
+        <div class="p-[16px] cursor-pointer" id="close-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M18 6L6 18"
+              stroke="#2B1887"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M6 6L18 18"
+              stroke="#2B1887"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div id="form-inputs" class="max-w-full">
+          <div class="m-[16px]">
+            <label class="text-[#2B1887]" for="">Title</label>
+            <input
+              type="text"
+              class="block appearance-none w-[100%] bg-[#D5ccff] py-[6px] rounded-[4px] mb-[16px]"
+              name=""
+              id="title"
+            />
+            <label class="text-[#2B1887]" for="">Client</label>
+            <input
+              type="text"
+              class="block appearance-none w-[100%] bg-[#D5ccff] py-[6px] rounded-[4px]"
+              name=""
+              id="client"
+            />
+          </div>
+          <div
+          class="flex mx-[16px] text-[#2B1887]"
+          id="input-priority"
+        >
+        <label class="text-[#2B1887] w-[50%]" for="">Priority</label>
+        <label class="text-[#2B1887] w-[50%] ml-[12px]" for="">Level of effort</label> 
+        </div>
+          <div
+            class="flex justify-between mx-[16px] text-[#2B1887]"
+            id="input-priority"
+          >
+            <select
+              name="priority"
+              class="w-[49%] appearance-none bg-[#D5CCFF] p-[6px] rounded-[4px]"
+              id="priority"
+            >
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+            <select
+              name="level-of-effort"
+              class="w-[49%] appearance-none bg-[#D5CCFF] p-[6px] rounded-[4px]"
+              id="level-of-effort"
+            >
+              <option value="Easy">Easy</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+          <div
+            class="m-[16px] bg-[#2B1887] text-[#ffffff] text-center py-[6px] rounded-[4px] mt-[35px]"
+          >
+            <p>Submit</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
