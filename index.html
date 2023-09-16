@@ -9,7 +9,7 @@
   <body class="bg-[#2B1887] font-body overflow-hidden">
     <div class="m-[40px] flex">
       <div
-        class="w-[350px] bg-[#D5CCFF] p-[16px] rounded-[16px] max-[94vh] overflow-y-auto scrollbar-none"
+        class="w-[350px] bg-[#D5CCFF] p-[16px] rounded-[16px] h-[94vh] overflow-y-auto scrollbar-none"
       >
         <div class="flex">
           <div>
@@ -121,13 +121,15 @@
       id="popup"
     >
       <div class="w-[500px] h-[385px] bg-white rounded-[16px]" id="popup-form">
-        <div class="p-[16px] cursor-pointer" id="close-icon">
+        <div class="p-[16px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
             viewBox="0 0 24 24"
             fill="none"
+            class="cursor-pointer"
+            id="close-icon"
           >
             <path
               d="M18 6L6 18"
@@ -192,7 +194,7 @@
             </select>
           </div>
           <div
-            class="m-[16px] bg-[#2B1887] text-[#ffffff] text-center py-[6px] rounded-[4px] mt-[35px]"
+            class="m-[16px] bg-[#2B1887] text-[#ffffff] text-center py-[6px] rounded-[4px] mt-[35px] cursor-pointer"
           >
             <p>Submit</p>
           </div>
