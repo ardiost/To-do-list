@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       body: ["DM Sans regualr"],
-      display: ["DM Sans regualr", ,],
+      display: ["DM Sans regualr"],
     },
     extend: {},
   },
