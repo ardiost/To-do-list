@@ -23,6 +23,17 @@ const popupValidation = function () {
   }
 };
 
+const submitPopUp = function () {
+  if (
+    !inputTitle.classList.contains("border") &&
+    !inputClient.classList.contains("border")
+  ) {
+    inputTitle.value = "";
+    inputClient.value = "";
+    popUp.classList.add("hidden");
+  }
+};
+
 // ----------------------------------------------------------------
 
 popUpForm.addEventListener("click", function preventClick(event) {
@@ -38,5 +49,17 @@ closeIcon.addEventListener("click", removePopUp);
 popUp.addEventListener("click", removePopUp);
 
 submitButton.addEventListener("click", popupValidation);
+
+inputClient.addEventListener("click", function () {
+  inputClient.classList.remove("border");
+  inputClient.classList.remove("border-red-600");
+});
+
+inputTitle.addEventListener("click", function () {
+  inputTitle.classList.remove("border");
+  inputTitle.classList.remove("border-red-600");
+});
+
+submitButton.addEventListener("click", submitPopUp);
 
 // ----------------------------------------------------------------
