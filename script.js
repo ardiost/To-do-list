@@ -5,11 +5,17 @@ const popUpForm = document.getElementById("popup-form");
 const inputClient = document.getElementById("client");
 const inputTitle = document.getElementById("title");
 const submitButton = document.getElementById("submit-btn");
+const priorityOption = document.getElementById("priority");
+const levelOfEffortOption = document.getElementById("level-of-effort");
 
 // ----------------------------------------------------------------
 
 const removePopUp = function () {
   popUp.classList.add("hidden");
+  inputTitle.classList.remove("border");
+  inputTitle.classList.remove("border-red-600");
+  inputClient.classList.remove("border");
+  inputClient.classList.remove("border-red-600");
 };
 
 const popupValidation = function () {
@@ -30,6 +36,8 @@ const submitPopUp = function () {
   ) {
     inputTitle.value = "";
     inputClient.value = "";
+    levelOfEffortOption.value = "Easy";
+    priorityOption.value = "High";
     popUp.classList.add("hidden");
   }
 };
