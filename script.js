@@ -30,6 +30,17 @@ const popupValidation = function () {
 };
 
 const submitPopUp = function () {
+  let randomId = Math.trunc(Math.random() * 1000000000000000);
+  let localData = {
+    id: randomId,
+    title: inputTitle.value,
+    client: inputClient.value,
+    priority: priorityOption.value,
+    level: levelOfEffortOption.value,
+  };
+  localStorage.setItem(randomId, JSON.stringify(localData));
+  console.log(JSON.parse(localStorage.getItem(randomId)));
+
   if (
     !inputTitle.classList.contains("border") &&
     !inputClient.classList.contains("border")
@@ -40,6 +51,7 @@ const submitPopUp = function () {
     priorityOption.value = "High";
     popUp.classList.add("hidden");
   }
+
 };
 
 // ----------------------------------------------------------------
@@ -71,3 +83,4 @@ inputTitle.addEventListener("click", function () {
 submitButton.addEventListener("click", submitPopUp);
 
 // ----------------------------------------------------------------
+
