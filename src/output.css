@@ -604,12 +604,12 @@ video {
   height: 385px;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-\[94vh\] {
   height: 94vh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .max-h-\[94vh\] {
@@ -698,18 +698,9 @@ video {
   border-width: 1px;
 }
 
-.border-double {
-  border-style: double;
-}
-
 .border-red-600 {
   --tw-border-opacity: 1;
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
-}
-
-.border-gray-800 {
-  --tw-border-opacity: 1;
-  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .bg-\[\#2B1887\] {
