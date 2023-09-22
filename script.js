@@ -23,7 +23,7 @@ const changeStatus = function (id) {
       DoneList.insertAdjacentHTML(
         "afterend",
         `
-    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px]" id="${data.id}">
+    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer" id="${data.id}">
     <div>
       <p class="text-[#000000] text-[14px] font-bold">
         ${data.title}
@@ -76,7 +76,7 @@ if (!Object.keys(localStorage) == "" || !Object.keys(localStorage) == null) {
       toDoList.insertAdjacentHTML(
         "afterend",
         `
-    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px]" id="${objectData.id}">
+    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer" id="${objectData.id}">
     <div>
       <p class="text-[#000000] text-[14px] font-bold">
         ${objectData.title}
@@ -120,7 +120,7 @@ if (!Object.keys(localStorage) == "" || !Object.keys(localStorage) == null) {
       DoneList.insertAdjacentHTML(
         "afterend",
         `
-    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px]" id="${objectData.id}">
+    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer" id="${objectData.id}">
     <div>
       <p class="text-[#000000] text-[14px] font-bold">
         ${objectData.title}
@@ -195,7 +195,7 @@ const submitPopUp = function () {
   };
 
   const htmlCode = `
-  <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px]" id="${randomId}">
+  <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer" id="${randomId}">
   <div>
     <p class="text-[#000000] text-[14px] font-bold">
       ${localData.title}
