@@ -1,16 +1,17 @@
-const addButton = document.getElementById("new-item-button");
-const popUp = document.getElementById("popup");
-const closeIcon = document.getElementById("close-icon");
-const popUpForm = document.getElementById("popup-form");
-const inputClient = document.getElementById("client");
-const inputTitle = document.getElementById("title");
-const submitButton = document.getElementById("submit-btn");
-const priorityOption = document.getElementById("priority");
-const levelOfEffortOption = document.getElementById("level-of-effort");
-const toDoList = document.getElementById("todo-column");
-const DoneList = document.getElementById("done-column");
-// ------------------------------- OOP class ---------------------------------
 import { Task } from "./Task.js";
+import {
+  addButton,
+  popUp,
+  closeIcon,
+  popUpForm,
+  inputClient,
+  inputTitle,
+  submitButton,
+  priorityOption,
+  levelOfEffortOption,
+  toDoList,
+  DoneList,
+} from "./declare.js";
 // ------------------------------ functions ----------------------------------
 const insertHtmlCode = function (title, client, id, column) {
   const htmlCode = `
@@ -57,14 +58,6 @@ const insertHtmlCode = function (title, client, id, column) {
 };
 
 // -------------------------------- load from localstorage--------------------------------
-
-const removePopUp = function () {
-  popUp.classList.add("hidden");
-  inputTitle.classList.remove("border");
-  inputTitle.classList.remove("border-red-600");
-  inputClient.classList.remove("border");
-  inputClient.classList.remove("border-red-600");
-};
 
 const popupValidation = function () {
   if (inputClient.value == "" || inputClient.value == null) {
@@ -128,18 +121,6 @@ const submitPopUp = function () {
 };
 
 // ----------------------------------------------------------------
-
-popUpForm.addEventListener("click", function preventClick(event) {
-  event.stopImmediatePropagation();
-});
-
-addButton.addEventListener("click", function openPopUp() {
-  popUp.classList.remove("hidden");
-});
-
-closeIcon.addEventListener("click", removePopUp);
-
-popUp.addEventListener("click", removePopUp);
 
 submitButton.addEventListener("click", popupValidation);
 
