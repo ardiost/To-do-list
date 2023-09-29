@@ -9,21 +9,8 @@ const priorityOption = document.getElementById("priority");
 const levelOfEffortOption = document.getElementById("level-of-effort");
 const toDoList = document.getElementById("todo-column");
 const DoneList = document.getElementById("done-column");
-const List = document.getElementById("doinglist");
-
 // ------------------------------- OOP class ---------------------------------
-
-class Task {
-  constructor(title, client, priority, levelOfEffort, status, id) {
-    this.title = title;
-    this.name = client;
-    this.priority = priority;
-    this.levelOfEffort = levelOfEffort;
-    this.status = status;
-    this.id = Math.trunc(Math.random() * 1000000000000000);
-  }
-}
-
+import { Task } from "./Task.js";
 // ------------------------------ functions ----------------------------------
 const insertHtmlCode = function (title, client, id, column) {
   const htmlCode = `
