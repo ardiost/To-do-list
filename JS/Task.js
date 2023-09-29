@@ -1,19 +1,34 @@
+import {
+  addButton,
+  popUp,
+  closeIcon,
+  popUpForm,
+  inputClient,
+  inputTitle,
+  submitButton,
+  priorityOption,
+  levelOfEffortOption,
+  toDoList,
+  DoneList,
+} from "./declare.js";
+
 export class Task {
-  constructor(title, client, priority, levelOfEffort, status, id) {
+  constructor(title, name, priority, levelOfEffort, status, column, id) {
     this.title = title;
-    this.name = client;
+    this.name = name;
     this.priority = priority;
     this.levelOfEffort = levelOfEffort;
-    this.status = status;
+    this.status = "doing";
+    this.column = toDoList;
     this.id = Math.trunc(Math.random() * 1000000000000000);
   }
 
-  insertHtmlCode(title, client, id, column) {
+  insertHtmlCode() {
     const htmlCode = `
-    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer" id="${id}">
+    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer" id="${this.id}">
     <div>
       <p class="text-[#000000] text-[14px] font-bold">
-        ${title}
+        ${this.title}
       </p>
     </div>
     <div class="flex items-center justify-between mt-[10px]">
@@ -45,10 +60,10 @@ export class Task {
         </svg>
       </div>
       <div>
-        <p class="text-[14px] text-[#2B1887]">${client}</p>
+        <p class="text-[14px] text-[#2B1887]">${this.name}</p>
       </div>
     </div>
     </div>`;
-    column.insertAdjacentHTML("afterend", htmlCode);
+    this.column.insertAdjacentHTML("afterend", htmlCode);
   }
 }

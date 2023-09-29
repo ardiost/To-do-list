@@ -12,7 +12,7 @@ import {
   DoneList,
 } from "./declare.js";
 
-const removePopUp = function () {
+export const removePopUp = function () {
   popUp.classList.add("hidden");
   inputTitle.classList.remove("border");
   inputTitle.classList.remove("border-red-600");
@@ -20,14 +20,10 @@ const removePopUp = function () {
   inputClient.classList.remove("border-red-600");
 };
 
-popUpForm.addEventListener("click", function preventClick(event) {
-  event.stopImmediatePropagation();
-});
-
-addButton.addEventListener("click", function openPopUp() {
+export const openPopUp = function () {
   popUp.classList.remove("hidden");
-});
+};
 
-closeIcon.addEventListener("click", removePopUp);
-
-popUp.addEventListener("click", removePopUp);
+export const preventClick = function (event) {
+  event.stopImmediatePropagation();
+};

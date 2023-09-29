@@ -1,4 +1,5 @@
 import { Task } from "./Task.js";
+import { removePopUp, openPopUp, preventClick } from "./popUp.js";
 import {
   addButton,
   popUp,
@@ -12,19 +13,11 @@ import {
   toDoList,
   DoneList,
 } from "./declare.js";
-
-// -------------------------------- load from localstorage--------------------------------
-
-const popupValidation = function () {
-  if (inputClient.value == "" || inputClient.value == null) {
-    inputClient.classList.add("border");
-    inputClient.classList.add("border-red-600");
-  }
-  if (inputTitle.value == "" || inputTitle.value == null) {
-    inputTitle.classList.add("border");
-    inputTitle.classList.add("border-red-600");
-  }
-};
+import {
+  removeTitleBorder,
+  removeClientBorder,
+  popupValidation,
+} from "./popUpValidation.js";
 
 const submitPopUp = function () {
   if (!localStorage.getItem("storage")) {
@@ -38,7 +31,7 @@ const submitPopUp = function () {
     "doing"
   );
 
-  insertHtmlCode(task.title, task.name, task.id, toDoList);
+  task.insertHtmlCode();
 
   if (
     !inputTitle.classList.contains("border") &&
@@ -53,76 +46,57 @@ const submitPopUp = function () {
     levelOfEffortOption.value = "Easy";
     priorityOption.value = "High";
     popUp.classList.add("hidden");
-
-    const arrayData = JSON.parse(localStorage.getItem("storage"));
-    arrayData.forEach((element) => {
-      let taskId = document.getElementById(`${element.id}`);
-      taskId.addEventListener("click", function (e) {
-        if (e.currentTarget == taskId) {
-          taskId.remove();
-          insertHtmlCode(element.title, element.name, element.id, DoneList);
-          let updateArrayStatus = arrayData.find(function (obj) {
-            return obj.id == element.id;
-          });
-          let objIndex = arrayData.findIndex(function (obj) {
-            return obj.id == element.id;
-          });
-          updateArrayStatus.status = "done";
-          arrayData[objIndex] = updateArrayStatus;
-          localStorage.setItem("storage", JSON.stringify(arrayData));
-        }
-      });
-    });
   }
 };
 
 // ----------------------------------------------------------------
+popUpForm.addEventListener("click", preventClick);
+
+addButton.addEventListener("click", openPopUp);
+
+closeIcon.addEventListener("click", removePopUp);
+
+popUp.addEventListener("click", removePopUp);
 
 submitButton.addEventListener("click", popupValidation);
 
-inputClient.addEventListener("click", function () {
-  inputClient.classList.remove("border");
-  inputClient.classList.remove("border-red-600");
-});
+inputClient.addEventListener("click", removeClientBorder);
 
-inputTitle.addEventListener("click", function () {
-  inputTitle.classList.remove("border");
-  inputTitle.classList.remove("border-red-600");
-});
+inputTitle.addEventListener("click", removeTitleBorder);
 
 submitButton.addEventListener("click", submitPopUp);
 
 // ----------------------------------------------------------------
 
-if (localStorage.getItem("storage")) {
-  const loadData = JSON.parse(localStorage.getItem("storage"));
-  loadData.forEach((element) => {
-    if (element.status == "doing")
-      insertHtmlCode(element.title, element.name, element.id, toDoList);
-    else insertHtmlCode(element.title, element.name, element.id, DoneList);
-  });
-}
+// if (localStorage.getItem("storage")) {
+//   const loadData = JSON.parse(localStorage.getItem("storage"));
+//   loadData.forEach((element) => {
+//     if (element.status == "doing")
+//     insertHtmlCode(element.title, element.name, element.id, toDoList);
+//     else insertHtmlCode(element.title, element.name, element.id, DoneList);
+//   });
+// }
 
-const arrayData = JSON.parse(localStorage.getItem("storage"));
-if (arrayData) {
-  arrayData.forEach((element) => {
-    if (element.status == "doing") {
-      let taskId = document.getElementById(`${element.id}`);
-      taskId.addEventListener("click", function (e) {
-        if (e.currentTarget == taskId) {
-          taskId.remove();
-          insertHtmlCode(element.title, element.name, element.id, DoneList);
-          let updateArrayStatus = arrayData.find(function (obj) {
-            return obj.id == element.id;
-          });
-          let objIndex = arrayData.findIndex(function (obj) {
-            return obj.id == element.id;
-          });
-          updateArrayStatus.status = "done";
-          arrayData[objIndex] = updateArrayStatus;
-          localStorage.setItem("storage", JSON.stringify(arrayData));
-        }
-      });
-    }
-  });
-}
+// const arrayData = JSON.parse(localStorage.getItem("storage"));
+// if (arrayData) {
+//   arrayData.forEach((element) => {
+//     if (element.status == "doing") {
+//       let taskId = document.getElementById(`${element.id}`);
+//       taskId.addEventListener("click", function (e) {
+//         if (e.currentTarget == taskId) {
+//           taskId.remove();
+// insertHtmlCode(element.title, element.name, element.id, DoneList);
+//           let updateArrayStatus = arrayData.find(function (obj) {
+//             return obj.id == element.id;
+//           });
+//           let objIndex = arrayData.findIndex(function (obj) {
+//             return obj.id == element.id;
+//           });
+//           updateArrayStatus.status = "done";
+//           arrayData[objIndex] = updateArrayStatus;
+//           localStorage.setItem("storage", JSON.stringify(arrayData));
+//         }
+//       });
+//     }
+//   });
+// }
