@@ -1,4 +1,4 @@
-import { Task } from "./Task.js";
+import { submitPopUp } from "./submitPopup.js";
 import { removePopUp, openPopUp, preventClick } from "./popUp.js";
 import {
   addButton,
@@ -18,36 +18,6 @@ import {
   removeClientBorder,
   popupValidation,
 } from "./popUpValidation.js";
-
-const submitPopUp = function () {
-  // if (!localStorage.getItem("storage")) {
-  //   localStorage.setItem("storage", JSON.stringify([]));
-  // }
-  const task = new Task(
-    inputTitle.value,
-    inputClient.value,
-    priorityOption.value,
-    levelOfEffortOption.value,
-    "doing"
-  );
-
-  task.insertHtmlCode();
-
-  if (
-    !inputTitle.classList.contains("border") &&
-    !inputClient.classList.contains("border")
-  ) {
-    const data = JSON.parse(localStorage.getItem("storage"));
-    data.push(task);
-    localStorage.setItem("storage", JSON.stringify(data));
-    console.log(JSON.parse(localStorage.getItem("storage")));
-    inputTitle.value = "";
-    inputClient.value = "";
-    levelOfEffortOption.value = "Easy";
-    priorityOption.value = "High";
-    popUp.classList.add("hidden");
-  }
-};
 
 // ----------------------------------------------------------------
 popUpForm.addEventListener("click", preventClick);

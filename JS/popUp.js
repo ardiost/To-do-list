@@ -11,7 +11,6 @@ import {
   toDoList,
   DoneList,
 } from "./declare.js";
-import { a } from "./script.js";
 
 
 export const removePopUp = function () {
