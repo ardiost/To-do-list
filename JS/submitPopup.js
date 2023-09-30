@@ -16,6 +16,10 @@ import { insertHtmlCode } from "./insertHtml.js";
 
 import { Task } from "./Task.js";
 
+import { resetPopUp } from "./popUp.js";
+
+import { addTolocalStorage } from "./localstorage.js";
+
 export const submitPopUp = function () {
   const task = new Task(
     inputTitle.value,
@@ -25,20 +29,13 @@ export const submitPopUp = function () {
     "doing"
   );
 
-  insertHtmlCode(task.title, task.name, task.column, task.id);
+  insertHtmlCode(task.title, task.name, toDoList, task.id);
 
   if (
     !inputTitle.classList.contains("border") &&
     !inputClient.classList.contains("border")
   ) {
-    const data = JSON.parse(localStorage.getItem("storage"));
-    data.push(task);
-    localStorage.setItem("storage", JSON.stringify(data));
-    console.log(JSON.parse(localStorage.getItem("storage")));
-    inputTitle.value = "";
-    inputClient.value = "";
-    levelOfEffortOption.value = "Easy";
-    priorityOption.value = "High";
-    popUp.classList.add("hidden");
+    addTolocalStorage({ ...task });
+    resetPopUp();
   }
 };
