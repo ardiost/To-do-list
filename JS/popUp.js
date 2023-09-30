@@ -11,6 +11,8 @@ import {
   toDoList,
   DoneList,
 } from "./declare.js";
+import { a } from "./script.js";
+
 
 export const removePopUp = function () {
   popUp.classList.add("hidden");

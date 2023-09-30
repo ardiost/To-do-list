@@ -20,9 +20,9 @@ import {
 } from "./popUpValidation.js";
 
 const submitPopUp = function () {
-  if (!localStorage.getItem("storage")) {
-    localStorage.setItem("storage", JSON.stringify([]));
-  }
+  // if (!localStorage.getItem("storage")) {
+  //   localStorage.setItem("storage", JSON.stringify([]));
+  // }
   const task = new Task(
     inputTitle.value,
     inputClient.value,
