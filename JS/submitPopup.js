@@ -21,20 +21,19 @@ import { resetPopUp } from "./popUp.js";
 import { addTolocalStorage } from "./localstorage.js";
 
 export const submitPopUp = function () {
-  const task = new Task(
-    inputTitle.value,
-    inputClient.value,
-    priorityOption.value,
-    levelOfEffortOption.value,
-    "doing"
-  );
-
-  insertHtmlCode(task.title, task.name, toDoList, task.id);
-
   if (
     !inputTitle.classList.contains("border") &&
     !inputClient.classList.contains("border")
   ) {
+    const task = new Task(
+      inputTitle.value,
+      inputClient.value,
+      priorityOption.value,
+      levelOfEffortOption.value,
+      "doing"
+    );
+
+    insertHtmlCode(task.title, task.name, toDoList, task.id);
     addTolocalStorage({ ...task });
     resetPopUp();
   }

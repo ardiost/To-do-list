@@ -1,5 +1,7 @@
 import { submitPopUp } from "./submitPopup.js";
+import { onClickTask } from "./changestatus.js";
 import { removePopUp, openPopUp, preventClick } from "./popUp.js";
+import { loadlocalstorage } from "./localstorage.js";
 import {
   addButton,
   popUp,
@@ -18,6 +20,13 @@ import {
   removeClientBorder,
   popupValidation,
 } from "./popUpValidation.js";
+// ----------------------------------------------------------------
+
+loadlocalstorage();
+
+const addToOtherList = function () {
+  onClickTask(e);
+};
 
 // ----------------------------------------------------------------
 popUpForm.addEventListener("click", preventClick);
@@ -35,5 +44,6 @@ inputClient.addEventListener("click", removeClientBorder);
 inputTitle.addEventListener("click", removeTitleBorder);
 
 submitButton.addEventListener("click", submitPopUp);
+
 
 // ----------------------------------------------------------------
