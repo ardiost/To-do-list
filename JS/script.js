@@ -1,5 +1,5 @@
 import { submitPopUp } from "./submitPopup.js";
-import { onClickTask } from "./changestatus.js";
+import { changestatus } from "./changestatus.js";
 import { removePopUp, openPopUp, preventClick } from "./popUp.js";
 import { loadlocalstorage } from "./localstorage.js";
 import {
@@ -23,10 +23,7 @@ import {
 // ----------------------------------------------------------------
 
 loadlocalstorage();
-
-const addToOtherList = function () {
-  onClickTask(e);
-};
+changestatus();
 
 // ----------------------------------------------------------------
 popUpForm.addEventListener("click", preventClick);

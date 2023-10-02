@@ -7,4 +7,8 @@ export class Task {
     this.status = "doing";
     this.id = Math.trunc(Math.random() * 1000000000000000);
   }
+
+  doneTask() {
+    this.status = "done";
+  }
 }
