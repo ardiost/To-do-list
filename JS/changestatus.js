@@ -29,16 +29,9 @@ export const changestatus = function () {
 
 const showInDoneColumn = function () {
   const reciveData = JSON.parse(localStorage.getItem("data"));
-  const indexOfData = reciveData.findIndex((e) => {
-    return e.id;
-  });
-  reciveData[indexOfData].status = "done";
-  updateTolocalStorage(reciveData);
-  this.remove();
-  insertHtmlCode(
-    reciveData[indexOfData].title,
-    reciveData[indexOfData].name,
-    DoneList,
-    reciveData[indexOfData].id
+  console.log(
+    reciveData.find((e) => {
+      console.log(this);
+    })
   );
 };
