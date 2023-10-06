@@ -19,19 +19,16 @@ import { updateTolocalStorage } from "./localstorage.js";
 export const changestatus = function () {
   if (localStorage.getItem("data")) {
     const reciveData = JSON.parse(localStorage.getItem("data"));
-    reciveData.forEach((element) => {
+    reciveData.forEach((element, i) => {
       document
         .getElementById(`${element.id}`)
-        .addEventListener("click", showInDoneColumn);
+        .addEventListener("click", showInDoneColumn(element, i));
     });
   }
 };
 
-const showInDoneColumn = function () {
+const showInDoneColumn = function (element, i) {
   const reciveData = JSON.parse(localStorage.getItem("data"));
-  console.log(
-    reciveData.find((e) => {
-      console.log(this);
-    })
-  );
+  console.log(element.id);
+  // console.log(document.getElementById(`${reciveData[i]}.id`));
 };
