@@ -37,7 +37,7 @@ export const submitPopUp = function () {
 
     insertHtmlCode(task.title, task.name, toDoList, task.id);
     addTolocalStorage({ ...task });
-    changestatus();
     resetPopUp();
+    changestatus();
   }
 };
