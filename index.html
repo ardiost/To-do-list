@@ -10,8 +10,9 @@
     <div class="m-[40px] flex">
       <div
         class="w-[350px] bg-[#D5CCFF] p-[16px] rounded-[16px] h-[94vh] overflow-y-auto scrollbar-none"
+        id="doinglist"
       >
-        <div class="flex" id="todo-column">
+        <div class="flex" id="todo-column" onclick="test()">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -163,6 +164,8 @@
         </div>
       </div>
     </div>
-    <script src="/script.js"></script>
+    <script type="module" src="./JS/script.js">
+      import { addToOtherList } from "./script";
+    </script>
   </body>
 </html>
