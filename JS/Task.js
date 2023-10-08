@@ -1,3 +1,20 @@
+import {
+  addButton,
+  popUp,
+  closeIcon,
+  popUpForm,
+  inputClient,
+  inputTitle,
+  submitButton,
+  priorityOption,
+  levelOfEffortOption,
+  toDoList,
+  DoneList,
+} from "./declare.js";
+
+import { insertHtmlCode } from "./insertHtml.js";
+
+import { updateTolocalStorage } from "./localstorage.js";
 export class Task {
   constructor(title, name, priority, levelOfEffort, status, id) {
     this.title = title;
@@ -8,7 +25,20 @@ export class Task {
     this.id = Math.trunc(Math.random() * 1000000000000000);
   }
 
-  doneTask() {
-    this.status = "done";
-  }
+  changestatus = () => {
+    document.getElementById(`${this.id}`).addEventListener("click", () => {
+      showInDoneColumn();
+    });
+  };
+
+  showInDoneColumn = () => {
+    const reciveData = JSON.parse(localStorage.getItem("data"));
+    if (this.status != "done") {
+      console.log(this.id);
+      document.getElementById(`${this.id}`).remove();
+      this.status = "done";
+      insertHtmlCode(this.title, this.name, DoneList, this.id);
+      updateTolocalStorage(reciveData);
+    }
+  };
 }
