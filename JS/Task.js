@@ -26,12 +26,14 @@ export class Task {
   }
 
   changestatus() {
-    document.getElementById(`${this.id}`).addEventListener("click", () => {
+    document.getElementById(`${this.id}`).addEventListener("click", (e) => {
       const reciveData = JSON.parse(localStorage.getItem("data"));
       if (this.status != "done") {
         document.getElementById(`${this.id}`).remove();
-        const currentObject = reciveData.filter((e) => {});
-        this.status = "done";
+        if ((e.currentTarget.id = this.id)) {
+          this.status = "done";
+          console.log(indexOf);
+        }
         insertHtmlCode(this.title, this.name, DoneList, this.id);
         updateTolocalStorage(reciveData);
       }
