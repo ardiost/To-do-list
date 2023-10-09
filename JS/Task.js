@@ -25,20 +25,16 @@ export class Task {
     this.id = Math.trunc(Math.random() * 1000000000000000);
   }
 
-  changestatus = () => {
+  changestatus() {
     document.getElementById(`${this.id}`).addEventListener("click", () => {
-      showInDoneColumn();
+      const reciveData = JSON.parse(localStorage.getItem("data"));
+      if (this.status != "done") {
+        document.getElementById(`${this.id}`).remove();
+        const currentObject = reciveData.filter((e) => {});
+        this.status = "done";
+        insertHtmlCode(this.title, this.name, DoneList, this.id);
+        updateTolocalStorage(reciveData);
+      }
     });
-  };
-
-  showInDoneColumn = () => {
-    const reciveData = JSON.parse(localStorage.getItem("data"));
-    if (this.status != "done") {
-      console.log(this.id);
-      document.getElementById(`${this.id}`).remove();
-      this.status = "done";
-      insertHtmlCode(this.title, this.name, DoneList, this.id);
-      updateTolocalStorage(reciveData);
-    }
-  };
+  }
 }

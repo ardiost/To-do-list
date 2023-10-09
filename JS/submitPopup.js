@@ -12,7 +12,7 @@ import {
   DoneList,
 } from "./declare.js";
 
-import { changestatus } from "./changestatus.js";
+// import { changestatus } from "./changestatus.js";
 
 import { insertHtmlCode } from "./insertHtml.js";
 
@@ -36,8 +36,9 @@ export const submitPopUp = function () {
     );
 
     insertHtmlCode(task.title, task.name, toDoList, task.id);
+    task.changestatus();
     addTolocalStorage({ ...task });
     resetPopUp();
-    changestatus();
+    // changestatus();
   }
 };

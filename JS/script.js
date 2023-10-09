@@ -1,5 +1,5 @@
 import { submitPopUp } from "./submitPopup.js";
-import { changestatus } from "./changestatus.js";
+// import { changestatus } from "./changestatus.js";
 import { removePopUp, openPopUp, preventClick } from "./popUp.js";
 import { loadlocalstorage } from "./localstorage.js";
 import {
@@ -20,10 +20,10 @@ import {
   removeClientBorder,
   popupValidation,
 } from "./popUpValidation.js";
+import { Task } from "./Task.js";
 // ----------------------------------------------------------------
 
 loadlocalstorage();
-changestatus();
 
 // ----------------------------------------------------------------
 popUpForm.addEventListener("click", preventClick);
