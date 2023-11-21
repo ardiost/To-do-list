@@ -1,6 +1,6 @@
 export const insertHtmlCode = function (title, name, column, id) {
   const htmlCode = `
-    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer" id="${id}">
+    <div class="bg-[#FFFFFF] p-[16px] rounded-[12px] mt-[16px] cursor-pointer task" id="${id}">
     <div>
       <p class="text-[#000000] text-[14px] font-bold">
         ${title}

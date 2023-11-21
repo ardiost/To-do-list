@@ -39,6 +39,5 @@ export const submitPopUp = function () {
     task.changestatus();
     addTolocalStorage({ ...task });
     resetPopUp();
-    // changestatus();
   }
 };

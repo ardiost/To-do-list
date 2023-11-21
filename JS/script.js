@@ -1,5 +1,5 @@
 import { submitPopUp } from "./submitPopup.js";
-// import { changestatus } from "./changestatus.js";
+import { findTask } from "./findTask.js";
 import { removePopUp, openPopUp, preventClick } from "./popUp.js";
 import { loadlocalstorage } from "./localstorage.js";
 import {
@@ -10,6 +10,7 @@ import {
   inputClient,
   inputTitle,
   submitButton,
+  doingList,
   priorityOption,
   levelOfEffortOption,
   toDoList,
@@ -26,6 +27,9 @@ import { Task } from "./Task.js";
 loadlocalstorage();
 
 // ----------------------------------------------------------------
+
+window.addEventListener("load", findTask);
+
 popUpForm.addEventListener("click", preventClick);
 
 addButton.addEventListener("click", openPopUp);
@@ -41,6 +45,7 @@ inputClient.addEventListener("click", removeClientBorder);
 inputTitle.addEventListener("click", removeTitleBorder);
 
 submitButton.addEventListener("click", submitPopUp);
+
 
 
 // ----------------------------------------------------------------

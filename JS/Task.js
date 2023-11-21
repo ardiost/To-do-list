@@ -32,10 +32,12 @@ export class Task {
         document.getElementById(`${this.id}`).remove();
         if ((e.currentTarget.id = this.id)) {
           this.status = "done";
-          console.log(indexOf);
+          const argumentIndex = reciveData.findIndex(({ id }) => id == this.id);
+          reciveData.splice(argumentIndex, 1, this);
+          console.log(reciveData);
+          insertHtmlCode(this.title, this.name, DoneList, this.id);
+          updateTolocalStorage(reciveData);
         }
-        insertHtmlCode(this.title, this.name, DoneList, this.id);
-        updateTolocalStorage(reciveData);
       }
     });
   }

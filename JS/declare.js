@@ -9,3 +9,5 @@ export const priorityOption = document.getElementById("priority");
 export const levelOfEffortOption = document.getElementById("level-of-effort");
 export const toDoList = document.getElementById("todo-column");
 export const DoneList = document.getElementById("done-column");
+export const doingList = document.getElementById("doinglist");
+
